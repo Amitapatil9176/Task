@@ -1,6 +1,3 @@
-
-# AIML RECRUITMENT TEST SOLUTIONS - By Amita Patil
-
 # Scenario 1: Data Validation
 def validate_data(data):
     invalid_entries = []
@@ -92,6 +89,12 @@ def weighted_accuracy(y_true, y_pred):
             correct += 2 if true == 1 else 1
     total = sum(2 if t == 1 else 1 for t in y_true)
     return correct / total
+y_true = [0, 1, 1, 0, 1]
+y_pred = [0, 1, 0, 0, 1]
+
+score = weighted_accuracy(y_true, y_pred)
+print("Weighted Accuracy:", score)
+
 
 # Can be used with: scorer = make_scorer(weighted_accuracy)
 
